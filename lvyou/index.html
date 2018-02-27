@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+<title>旅伴旅行网</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<link href="css/style.min.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body class="bg-lightgray">
+
+<!-- Header -->
+
+<header id="header" class="container navbar-fixed-top text-center">
+
+	<div class="row title-section">
+
+		<h1>旅伴旅行网</h1>
+
+		<a id="back-button">
+
+			<span class="fa-stack fa-lg pull-left">
+
+				<i class="fa fa-circle-thin fa-stack-2x"></i>
+
+				<i class="fa fa-angle-left fa-stack-1x"></i>
+
+			</span>
+
+		</a>
+
+		<div class="dropdown pull-right">
+
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="menu-link">
+
+				<span class="fa-stack fa-lg pull-right">
+
+					<i class="fa fa-bars fa-stack-1x"></i>
+
+				</span>
+
+			</a>
+
+			<ul class="dropdown-menu" role="menu" aria-labelledby="menu-link" id="menu">
+
+				<li><a href="/order">我的订单</a></li>
+
+				<li><a href="/change-password">修改密码</a></li>
+
+				<li class="divider"></li>
+
+				<li><a href="/about">关于旅伴</a></li>
+
+				<li class="divider"></li>
+
+				<li><a href="javascript:Sys.logout();">退出</a></li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+</header>
+
+<!-- // Header -->
+
+<div id="book-form">
+
+<div id="flight-info" class="container lvbanx-flight">
+
+	<div class="data-row product-row">
+
+		<div class="col-xs-12 text-nowrap time departure-time">__ddt__</div>
+
+		<div class="clear"></div>
+
+		<div class="col-xs-12 text-nowrap airport">__dan__ - __aan__</div>
+
+		<div class="clear"></div>
+
+		<div class="col-xs-6 text-nowrap flight-info" style="text-align: right;">
+
+			<span class="carrier-icon carrier-__al__"></span>
+
+			__fi__
+
+			
+
+		</div>
+
+		<div class="col-xs-6 text-nowrap other-info notable">
+
+		<span class="product-tags small text-nowrap"></span>
+
+		__n__ <i class="fa fa-rmb"></i>__p__</div>
+
+		<div class="clear"></div>
+
+	</div>
+
+</div>
+
+
+
+<div class="container mt20 small panel panel-default" style="padding-left: 0; padding-right: 0">
+
+	<div class="panel-heading">乘机人信息</div>
+
+	<div class="panel-body">
+
+		<div id="passengers">
+			<!-- <div class="passenger">
+		<h5>乘机人1</h5>
+		<hr>
+		<div class="form-group">
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">乘客类型</label>
+			<div class="col-md-6">
+				<label class="radio-inline input-sm"><input type="radio" id="passenger_type1a" name="passenger_type1" checked="" value="Adult" onchange="Booking.showSummary()">成人</label>
+				<label class="radio-inline input-sm notable">此航班属特价航班，无法购买儿童票</label>
+			</div>
+			<div id="Passenger_1_Type-err" class="col-md-4 hidden text-danger err-msg input-sm">
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="form-group">
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">姓名</label>
+			<div class="col-md-6">
+				<input class="form-control input-sm" id="name1" name="name1" type="text" required="">
+			</div>
+			<div id="Passenger_1_Name-err" class="col-md-4 hidden text-danger err-msg input-sm">
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="form-group">
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">证件类型</label>
+			<div class="col-md-6">
+				<label class="radio-inline input-sm"><input type="radio" id="card_type1id" name="card_type1id" checked="" value="IDCard">身份证</label>
+				<label class="radio-inline input-sm"><input type="radio" id="card_type1ps" name="card_type1id" value="Passport">护照</label>
+			</div>
+			<div id="Passenger_1_CardType-err" class="col-md-4 hidden text-danger err-msg input-sm">
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="form-group">
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">证件号码</label>
+			<div class="col-md-6">
+				<input class="form-control input-sm" id="id1" name="id1" type="text" data-cardtype="card_type1id" data-birthdate="birthdate1" required="">
+			</div>
+			<div id="Passenger_1_CardNo-err" class="col-md-4 hidden text-danger err-msg input-sm">
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="form-group">
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">出生日期</label>
+			<div class="col-md-6">
+				<input class="form-control input-sm" id="birthdate1" name="birthdate1" type="date">
+			</div>
+			<div id="Passenger_1_Birthdate-err" class="col-md-4 hidden text-danger err-msg input-sm">
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div> -->
+		</div>
+
+		<div class="mt10 text-right">
+
+			<button class="btn btn-success btn-sm add-passenger"><i class="fa fa-plus"></i> 增加乘机人</button>
+
+			<button class="btn btn-danger btn-sm remove-passenger"><i class="fa fa-remove"></i> 删除乘机人</button>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Packages -->
+
+<div class="container mt20 small panel panel-default" style="padding-left: 0; padding-right: 0">
+
+	<div class="panel-heading">套餐产品</div>
+
+	<div class="panel-body">
+
+		<div id="packages"></div>
+
+		<div class="form-group">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm"></label>
+
+			<div id="Package-err" class="col-md-6 text-danger input-sm hidden err-msg"></div>
+
+		</div>
+
+		<p class="text-left clear"></p>
+
+		<p class="text-left">
+
+			航空意外保险特别约定：
+
+			<ol>
+
+				<li>本保单每一被保险人限购一份，多购部分保险人不承担保险责任。</li>
+
+				<li>本保单仅承保被保险人持有效客票乘坐合法经营客运业务的民航班机，自踏入民航客机的舱门起至抵达目的地走出民航客机的舱门止，由于该民航班机发生空难而遭受意外伤害事故。</li>
+
+				<li>本保单仅承保被保险人乘坐保单上载明的航班过程中的保险责任。</li>
+
+			</ol>
+
+		</p>
+
+		<p class="text-left">
+
+			航班延误保险特别约定：
+
+			<ol>
+
+				<li>本保单每一被保险人限购一份，多购部分保险人不承担保险责任。</li>
+
+				<li>保险金额与保险责任：被保险人必须乘坐保单上载明的航班且航班抵达目的地时延误4小时及以上赔偿人民币300元；航班被取消赔偿人民币100元。</li>
+
+			</ol>
+
+		</p>
+
+	</div>
+
+</div>
+
+<!-- // Packages -->
+
+<!-- Contact -->
+
+<div class="container mt20 small panel panel-default" style="padding-left: 0; padding-right: 0">
+
+	<div class="panel-heading">联系人信息</div>
+
+	<div class="panel-body">
+
+		<div class="form-group">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">姓名</label>
+
+			<div class="col-md-6">
+
+				<input class="form-control input-sm" id="cname" name="cname" type="text" required>
+
+			</div>
+
+			<div id="ContactName-err" class="col-md-6 hidden text-danger err-msg input-sm">
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="form-group">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">手机</label>
+
+			<div class="col-md-6">
+
+				<input class="form-control input-sm" id="cmobile" name="cmobile" type="text" required>
+
+			</div>
+
+			<div id="ContactPhone-err" class="col-md-6 hidden text-danger err-msg input-sm">
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+
+</div>
+
+<!-- // Contact -->
+
+<!-- Delivery -->
+
+<div class="container mt20 small panel panel-default" style="padding-left: 0; padding-right: 0">
+
+	<div class="panel-heading">报销凭证</div>
+
+	<div class="panel-body">
+
+		<div class="form-group">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm"></label>
+
+			<div class="col-md-6">
+
+				<label class="radio-inline input-sm">
+
+					<input type="checkbox" name="NeedDelivery" value="true" onchange="$('.delivery').toggleClass('hidden');Booking.showSummary()">
+
+					我需要报销凭证，并愿意支付<span class="notable"><i class="fa fa-rmb"></i>10元</span>快递费
+
+				</label>
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="form-group delivery hidden">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">收件人</label>
+
+			<div class="col-md-6">
+
+				<input class="form-control input-sm" id="deliveryName" name="deliveryName" type="text">
+
+			</div>
+
+			<div id="DeliveryName-err" class="col-md-4 hidden text-danger err-msg input-sm">
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="form-group delivery hidden">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">手机</label>
+
+			<div class="col-md-6">
+
+				<input class="form-control input-sm" id="deliveryPhone" name="deliveryPhone" type="text">
+
+			</div>
+
+			<div id="DeliveryPhone-err" class="col-md-4 hidden text-danger err-msg input-sm">
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="form-group delivery hidden">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">邮编</label>
+
+			<div class="col-md-6">
+
+				<input class="form-control input-sm" id="deliveryZipCode" name="deliveryZipCode" type="text">
+
+			</div>
+
+			<div id="DeliveryZipCode-err" class="col-md-4 hidden text-danger err-msg input-sm">
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="form-group delivery hidden">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">地址</label>
+
+			<div class="col-md-6">
+
+				<textarea class="form-control input-sm" id="deliveryAddress" name="deliveryAddress" type="text"></textarea>
+
+			</div>
+
+			<div id="DeliveryAddress-err" class="col-md-4 hidden text-danger err-msg input-sm">
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+
+</div>
+
+<!-- // Delivery -->
+
+<!-- Summary -->
+
+<div class="container mt20 small panel panel-default" style="padding-left: 0; padding-right: 0">
+
+	<div class="panel-heading">协议</div>
+
+	<div class="panel-body text-center">
+
+		<p>在没有同等舱位或价格时，将给予您<span class="notable">全额退款</span>。</p>
+
+		<p><span class="notable">大客户</span>产品在退改签时需要额外支付<span class="fa fa-rmb notable">20</span>手续费。</p>
+
+	</div>
+
+</div>
+
+<div id="summary-area" class="container mt20 small panel panel-default hidden" style="padding-left: 0; padding-right: 0">
+
+	<div class="panel-heading">订单价格</div>
+
+	<div class="panel-body text-center">
+
+		<table class="table" style="width: 63%; margin: 0 auto;">
+
+			<thead>
+
+				<tr><th></th><th class="text-left">项目</th><th class="text-center">金额</th></tr>
+
+			</thead>
+
+			<tbody id="summary">
+
+			</tbody>
+
+			<tfoot>
+
+			</tfoot>
+
+				<tr>
+
+					<th colspan="2"></th>
+
+					<th class="text-right text-nowrap">
+
+						
+
+						<i class="fa fa-rmb notable"></i>
+
+						<span class="total-price notable"></span>
+
+					</th>
+
+				</tr>
+
+		</table>
+
+
+
+	</div>
+
+</div>
+
+<div class="mt20 mb20">&nbsp;</div>
+
+<!-- // Summary -->
+
+<footer id="confirm-footer" class="container text-center">
+
+	<div class="pull-left order-summary-trigger" data-toggle="#summary-area">
+
+		订单金额：&nbsp;
+
+		<i class="fa fa-rmb"></i>
+
+		<span class="total-price" ></span>
+
+		<span class="dropup">
+
+			<span class="caret"></span>
+
+		</span>
+
+	</div>
+
+	<button class="btn btn-primary btn-large btn-next pull-right">下一步</button>
+
+</footer>
+
+
+
+</div>
+
+<!-- Passenger Template -->
+
+<div id="passenger-template" class="hidden">
+
+	<div class="passenger">
+
+		<h5>乘机人__pid__</h5>
+
+		<hr>
+
+		<div class="form-group">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">乘客类型</label>
+
+			<div class="col-md-6">
+
+				<label class="radio-inline input-sm"><input type="radio" id="passenger_type__pid__a" name="passenger_type__pid__" checked value="Adult" onchange="Booking.showSummary()">成人</label>
+
+				<label class="radio-inline input-sm"><input type="radio" id="passenger_type__pid__c" name="passenger_type__pid__" value="Child" onchange="Booking.showSummary()">儿童</label>
+
+			</div>
+
+			<div id="Passenger___pid___Type-err" class="col-md-4 hidden text-danger err-msg input-sm">
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="form-group">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">姓名</label>
+
+			<div class="col-md-6">
+
+				<input class="form-control input-sm" id="name__pid__" name="name__pid__" type="text" required>
+
+			</div>
+
+			<div id="Passenger___pid___Name-err" class="col-md-4 hidden text-danger err-msg input-sm">
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="form-group">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">证件类型</label>
+
+			<div class="col-md-6">
+
+				<label class="radio-inline input-sm"><input type="radio" id="card_type__pid__id" name="card_type__pid__id" checked value="IDCard">身份证</label>
+
+				<label class="radio-inline input-sm"><input type="radio" id="card_type__pid__ps" name="card_type__pid__id" value="Passport">护照</label>
+
+			</div>
+
+			<div id="Passenger___pid___CardType-err" class="col-md-4 hidden text-danger err-msg input-sm">
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="form-group">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">证件号码</label>
+
+			<div class="col-md-6">
+
+				<input class="form-control input-sm" id="id__pid__" name="id__pid__" type="text" data-cardtype="card_type__pid__id" data-birthdate="birthdate__pid__" required>
+
+			</div>
+
+			<div id="Passenger___pid___CardNo-err" class="col-md-4 hidden text-danger err-msg input-sm">
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="form-group">
+
+			<label class="col-md-2 control-label text-nowrap text-right input-sm">出生日期</label>
+
+			<div class="col-md-6">
+
+				<input class="form-control input-sm" id="birthdate__pid__" name="birthdate__pid__" type="date">
+
+			</div>
+
+			<div id="Passenger___pid___Birthdate-err" class="col-md-4 hidden text-danger err-msg input-sm">
+
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+
+</div>
+
+<div id="package-template" class="hidden">
+
+	<div class="form-group">
+
+		<label class="col-md-2 control-label text-nowrap text-right input-sm"></label>
+
+		<div class="col-md-6">
+
+			<label class="radio-inline input-sm" title="__Description__"><input type="checkbox" name="package" data-price="__Price__" data-title="__Title__" data-description="__Description__" value="__Price__@__Title__" onchange="Booking.showSummary()">
+
+			<i class="fa fa-rmb notable">__Price__</i>&nbsp;
+
+			__Title__
+
+			</label>
+
+		</div>
+
+	</div>
+
+	<div class="clear"></div>
+
+</div>
+
+<div class="hidden">
+
+	<table>
+
+		<thead id="summary-template-header">
+
+			<tr>
+
+				<td class="text-center" rowspan="__rows__"><b>__section__<b></td>
+
+				<td class="text-left">__name__</td><td class="text-right">__unitPrice__ × __qty__</td>
+
+			</tr>
+
+		</thead>
+
+		<tbody id="summary-template">
+
+			<tr>
+
+				<td class="text-left">__name__</td><td class="text-right">__unitPrice__ × __qty__</td>
+
+			</tr>
+
+		</tbody>
+
+	</table>
+
+</div>
+
+<!--// Passenger Template -->
+
+<!-- Scripts -->
+
+<script type="text/javascript" src="js/require.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/common.js"></script>
+
+<!-- <script type="text/javascript" src="js/.com/js/user"></script> -->
+
+<!-- // Scripts -->
+
+<script type="text/javascript">
+
+require([
+
+	'jquery', 'js/booking/booking-flight.js'
+
+], function(jQuery, booking) {
+
+	window.Booking = booking;
+
+	Booking.init();
+
+
+});
+
+</script>
+
+</body>
+
+</html>
+
